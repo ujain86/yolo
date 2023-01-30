@@ -85,11 +85,12 @@ function buildTable() {
     myList.map((item) => {
             let card = container.appendChild(document.createElement('div'));
             card.setAttribute('class', 'list-group-item');
+            card.setAttribute('onclick', "location.href='./item.html?id=" + item.id + "'");
             let img = card.appendChild(document.createElement('div'));
             img.appendChild(document.createElement('img')).setAttribute('src', item.image);
             let right = card.appendChild(document.createElement('div'));
-            let h1 = right.appendChild(document.createElement('h6'));
-            h1.innerHTML = "<a href=./item.html?id="+item.id+">" + item.name + "</a>"
+            let h6 = right.appendChild(document.createElement('h6'));
+            h6.innerHTML =  item.name
         });
 
     pageButtons(data.pages);
