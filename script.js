@@ -7,7 +7,7 @@ let container = document.getElementById('container');
 var state = {
     'querySet': file,
     'page': 1,
-    'rows': 20,
+    'rows': 10,
     'window': 5,
 }
 
@@ -89,8 +89,12 @@ function buildTable() {
             let img = card.appendChild(document.createElement('div'));
             img.appendChild(document.createElement('img')).setAttribute('src', item.image);
             let right = card.appendChild(document.createElement('div'));
+            right.setAttribute('class', 'right-div');
+            let h5 = right.appendChild(document.createElement('h5'));
+            h5.innerHTML =  "Name: " + item.name;
             let h6 = right.appendChild(document.createElement('h6'));
-            h6.innerHTML =  item.name
+            h6.innerHTML =  "Age: " + item.age;
+
         });
 
     pageButtons(data.pages);
