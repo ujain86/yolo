@@ -25,6 +25,6 @@ container.innerHTML = '<div class="card" style="width: 20rem">'+
                             ' <h5 class="card-title">Gender: '+ data.gender +'</h5>' +
                             ' <h5 class="card-title">Age: '+ data.age +'</h5>' +
                             ' <h5 class="card-title">Description: '+ data.description +'</h5>' +
-                            ' <h5 class="card-title">Adoption Fee: '+ data.age +'</h5>' +
+                            ' <h5 class="card-title">Adoption Fee: $'+ data.adoptionFee +'</h5>' +
                         '</div>'+
                     '</div> '
